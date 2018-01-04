@@ -12,7 +12,7 @@ Package that implements the WordPress Nonces functionality (wp_nonce_*()) in an 
 Install with [Composer](https://getcomposer.org):
 
 ```sh
-$ composer require ovidiul/wp-nonces-oop
+$ composer require ovidiul/wp-nonces-oop:dev-master
 ```
 
 ### Run the tests
