@@ -1,29 +1,57 @@
-<?php namespace ThinkOvi\Nonces;
+<?php
+namespace ThinkOvi\Nonce;
 
 /**
-*  A sample class
+*  Nonce Interface
 *
-*  Use this section to define what this class is doing, the PHPDocumentator will use this
-*  to automatically generate an API documentation using this information.
+*  The Nonce Inteface Class
 *
 *  @author Liuta Ovidiu
 */
 class NonceInterface{
 
-   /**  @var string $m_SampleProperty define here what this variable is for, do this for every instance variable */
-   private $m_SampleProperty = '';
- 
-  /**
-  * Sample method 
-  *
-  * Always create a corresponding docblock for each method, describing what it is for,
-  * this helps the phpdocumentator to properly generator the documentation
-  *
-  * @param string $param1 A string containing the parameter, do this for each parameter to the function, make sure to make it descriptive
-  *
-  * @return string
-  */
-   public function method1($param1){
-			return "Hello World";
-   }
+    /**
+     * Get signature for action property.
+     **
+     * @return string $action Action value.
+     */
+    public function get_action();
+
+    /**
+     * Set signature for action property.
+     *
+     * @param string $param_action Action value.
+     * @return string $action      Action value set.
+     */
+    public function set_action( $param_action );
+
+    /**
+     * Get signature for name property.
+     *
+     * @return string $name The nonce name value.
+     */
+    public function get_name();
+
+    /**
+     * Set signature for name property.
+     *
+     * @param string $param_name Name for the nonce value to set.
+     * @return string $name      The nonce name value set.
+     */
+    public function set_name( $param_name );
+
+    /**
+     * Get signature for nonce property.
+     *
+     * @return string $nonce Nonce value.
+     */
+    public function get_nonce();
+
+    /**
+     * Set signature for nonce property.
+     *
+     * @param string $param_nonce Nonce value to set.
+     * @return string $nonce      Nonce value set.
+     */
+    public function set_nonce( $param_nonce );
 }
