@@ -1,13 +1,14 @@
-<phpunit 	bootstrap="vendor/autoload.php"
-			colors="true"
-			convertErrorsToExceptions="true"
-			convertNoticesToExceptions="true"
-			convertWarningsToExceptions="true"
-			stopOnFailure="true">
-			<testsuites>
-				<testsuite name="Unit Tests">
-					<directory>tests</directory>
-				</testsuite>
-			</testsuites>
-</phpunit>
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit colors="true" >
+	<testsuites>
+		<testsuite name="Nonces Test Suite">
+			<directory>tests/</directory>
+		</testsuite>
+	</testsuites>
 
+	<filter>
+		<whitelist>
+			<directory suffix=".php">src</directory>
+		</whitelist>
+	</filter>
+</phpunit>
