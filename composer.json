@@ -1,7 +1,7 @@
 {
-    "name": "thinkovi/wp-nonces-oop",
+    "name": "ovidiul/wp-nonces-oop",
     "description": "Classes that implements the WordPress Nonces functionality in an object oriented way.",
-    "homepage": "https://github.com/thinkovi/wp-nonces-oop",
+    "homepage": "https://github.com/ovidiul/wp-nonces-oop",
     "keywords": ["WordPress", "Nonces", "OOP"],
     "require": {
         "php": ">=5.6"
