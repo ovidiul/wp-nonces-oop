@@ -40,7 +40,7 @@ Generate a url with nonce parameter:
 
 Generate nonce field:
 
-``$field = $generator->generate_nonce_field()``  
+``$field = $generator->generate_nonce_field();``  
 
 Nonce validation:
 
