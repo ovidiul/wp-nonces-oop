@@ -25,6 +25,7 @@ class NonceGeneratorTest extends TestCase
      * @var    object $test_ng The default test generator object.
      */
     private $test_ng;
+
     /**
      * Setting up the test environment.
      */
@@ -46,6 +47,7 @@ class NonceGeneratorTest extends TestCase
         $this->assertInstanceOf( NonceGenerator::class, $this->test_ng2 );
         $this->assertInstanceOf( NonceGenerator::class, $this->test_ng1 );
     }
+
     /**
      * Test the getter and setter for the action property.
      */
@@ -57,6 +59,7 @@ class NonceGeneratorTest extends TestCase
         $action = $ng->set_action( 'new_action' );
         $this->assertSame( $ng->get_action(), $action );
     }
+
     /**
      * Test the getter and setter for the name property.
      */
@@ -68,6 +71,7 @@ class NonceGeneratorTest extends TestCase
         $name = $ng->set_name( 'new_name' );
         $this->assertSame( $ng->get_name(), $name );
     }
+
     /**
      * Test the getter and setter for the name property when default value in the constructor is used.
      */
@@ -80,6 +84,7 @@ class NonceGeneratorTest extends TestCase
         // Check the name property getter: the name value now is the default one.
         $this->assertSame( '_wpnonce', $ng->get_name() );
     }
+
     /**
      * Test the generate_nonce method used for the straight generation of the nonce.
      */
@@ -92,6 +97,7 @@ class NonceGeneratorTest extends TestCase
         // Check the nonce.
         $this->assertSame( $nonce_generated, $this->test_nonce );
     }
+
     /**
      * Test the getter and setter for the nonce property.
      */
@@ -107,6 +113,9 @@ class NonceGeneratorTest extends TestCase
         $this->assertSame( 'new_nonce', $this->test_ng1->get_nonce() );
     }
 
+    /**
+     * Test the generate nonce field
+     */
     public function test_generate_nonce_field(){
 
         $nfg = $this->test_ng1;
@@ -118,6 +127,9 @@ class NonceGeneratorTest extends TestCase
         $this->assertSame( $field_generated, $field_expected);
     }
 
+    /**
+     * Test the generate nonce field referrer
+     */
     public function test_generate_nonce_field_referer(){
 
         $nfg = $this->test_ng1;
@@ -128,12 +140,11 @@ class NonceGeneratorTest extends TestCase
         // Checking result.
         $this->assertSame( $field_generated, $field_expected);
     }
+
     /**
      * Test the generate_nonce_field method to build form field with a nonce parameter to send via POST. Here the
      * parameter refer and echo are called with values:
      *
-     *	referer: false ---> hidden field with refer url value is not added.
-     *	echo: true ------> the field is printed.
      */
     public function test_generate_nonce_field_echo(){
 
@@ -147,12 +158,11 @@ class NonceGeneratorTest extends TestCase
         // Checking result.
         $this->assertSame( $field_generated, $field_expected);
     }
+
     /**
      * Test the generate_nonce_field method to build form field with a nonce parameter to send via POST. Here the
      * parameter refer and echo are called with values:
      *
-     *	referer: true ---> hidden field with refer url value is added.
-     *	echo: true ------> the fields are printed.
      */
     public function test_generate_nonce_field_referer_echo(){
 
@@ -194,6 +204,7 @@ class NonceGeneratorTest extends TestCase
         // Check failure on validating.
         $this->assertFalse( $is_valid );
     }
+
     /**
      * Test the validate_nonce method used for the validation of the nonce through the $_REQUEST.
      */
