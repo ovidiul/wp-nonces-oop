@@ -39,9 +39,11 @@ Generate a url with nonce parameter:
 ```$url = $generator->generate_nonce_url( 'http://www.thinkovi.com' );```
 
 Generate nonce field:
+
 ``$field = $generator->generate_nonce_field()``  
 
 Nonce validation:
+
 ``$is_valid = $generator->validate_nonce($nonce);``
 
 To validate a nonce received in a page through request (GET or POST) use the validate_request() method:
