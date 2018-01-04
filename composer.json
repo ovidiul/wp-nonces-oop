@@ -4,6 +4,7 @@
     "homepage": "https://github.com/ovidiul/wp-nonces-oop",
     "keywords": ["WordPress", "Nonces", "OOP"],
     "license": "MIT",
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Liuta Ovidiu",
