@@ -4,11 +4,11 @@ namespace ThinkOvi\Nonce;
 /**
 *  Nonce Interface
 *
-*  The Nonce Inteface Class
+*  The Nonce Interface Class
 *
 *  @author Liuta Ovidiu
 */
-class NonceInterface{
+interface NonceInterface{
 
     /**
      * Get signature for action property.

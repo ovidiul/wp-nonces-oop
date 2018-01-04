@@ -35,7 +35,7 @@ class NonceGenerator extends NonceAbstract
         $this->generate_nonce();
 
         $name   = $this->get_name();
-        action  = $this->get_action();
+        $action  = $this->get_action();
         $actionurl = str_replace( '&amp;', '&', $param_actionurl );
 
         return wp_nonce_url( $actionurl, $action, $name );
@@ -101,7 +101,7 @@ class NonceGenerator extends NonceAbstract
         $nonce  = $this->get_nonce();
         $name = esc_attr( $name );
 
-        return wp_nonce_field( $action, $name, $param_referer, $param_echo )
+        return wp_nonce_field( $action, $name, $param_referer, $param_echo );
 
     }
 }
