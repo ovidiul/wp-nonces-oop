@@ -15,6 +15,16 @@ Install with [Composer](https://getcomposer.org):
 $ composer require ovidiul/wp-nonces-oop
 ```
 
+### Run the tests
+
+To run tests, executes commands below:
+
+```sh
+$ cd vendor/thinkovi/wp-nonces-oop
+$ composer install
+$ vendor/bin/phpunit
+```
+
 Features
 --------
 
