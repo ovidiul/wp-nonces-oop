@@ -38,27 +38,27 @@ Features
 
 Initialize the nonce object generator 
 
-```$generator = new NonceGenerator( 'action_name', 'nonce_parameter_name' );```
+**```$generator = new NonceGenerator( 'action_name', 'nonce_parameter_name' );```**
 
 Then, to generate the nonce use the generate_nonce() method:
 
-```$nonce = $generator->generate_nonce();```
+**```$nonce = $generator->generate_nonce();```**
   
 Generate a url with nonce parameter:
 
-```$url = $generator->generate_nonce_url( 'http://www.thinkovi.com' );```
+**```$url = $generator->generate_nonce_url( 'http://www.thinkovi.com' );```**
 
 Generate nonce field:
 
-``$field = $generator->generate_nonce_field();``  
+**``$field = $generator->generate_nonce_field();``**  
 
 Nonce validation:
 
-``$is_valid = $generator->validate_nonce($nonce);``
+**``$is_valid = $generator->validate_nonce($nonce);``**
 
 To validate a nonce received in a page through request (GET or POST) use the validate_request() method:
 
-```$is_valid = $generator->validate_request();```
+**```$is_valid = $generator->validate_request();```**
 
 ## Credits
 Liuta Ovidiu <info@thinkovi.com> , http://www.thinkovi.com
