@@ -1,0 +1,29 @@
+{
+    "name": "thinkovi/wp-nonces-oop",
+    "description": "Classes that implements the WordPress Nonces functionality in an object oriented way.",
+    "homepage": "https://github.com/thinkovi/wp-nonces-oop",
+    "keywords": ["WordPress", "Nonces", "OOP"],
+    "require": {
+        "php": ">=5.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.7.*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Liuta Ovidiu",
+            "email": "info@thinkovi.com",
+            "homepage": "http://www.thinkovi.com",
+            "role": "Wordpress Developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "classmap": ["src/"]
+    },
+    "autoload-dev": {
+        "classmap": ["test/"],
+        "files": ["test/mock-functions.php"]
+    }
+}
