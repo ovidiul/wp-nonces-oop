@@ -7,7 +7,7 @@ namespace ThinkOvi\Nonce;
  * @param string $action The nonce action value.
  * @return string $nonce The nonce.
  */
-function wp_create_nonce( $action ) {
+function wp_create_nonce($action ) {
     return substr( md5( $action ), -12, 10 );
 }
 
@@ -91,7 +91,14 @@ function sanitize_text_field( $text ) {
     return $text;
 }
 
-function wp_nonce_field( $action = -1, $name = "_wpnonce", $referer = true , $echo = true ) {
+/**
+ * @param int $action
+ * @param string $name
+ * @param bool $referer
+ * @param bool $echo
+ * @return string
+ */
+function wp_nonce_field($action = -1, $name = "_wpnonce", $referer = true , $echo = true ) {
     $name = esc_attr( $name );
     $nonce_field = '<input type="hidden" id="' . $name . '" name="' . $name . '" value="' . wp_create_nonce( $action ) . '" />';
 
@@ -104,7 +111,13 @@ function wp_nonce_field( $action = -1, $name = "_wpnonce", $referer = true , $ec
     return $nonce_field;
 }
 
-function wp_nonce_url( $actionurl, $action = -1, $name = '_wpnonce' ) {
+/**
+ * @param $actionurl
+ * @param int $action
+ * @param string $name
+ * @return string
+ */
+function wp_nonce_url($actionurl, $action = -1, $name = '_wpnonce' ) {
     $actionurl = str_replace( '&amp;', '&', $actionurl );
     return esc_html( add_query_arg( $name, wp_create_nonce( $action ), $actionurl ) );
 }
