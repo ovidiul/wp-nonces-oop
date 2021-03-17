@@ -2,7 +2,7 @@
     "name": "ovidiul/wp-nonces-oop",
     "description": "Classes that implements the WordPress Nonces functionality in an object oriented way.",
     "homepage": "https://github.com/ovidiul/wp-nonces-oop",
-    "keywords": ["WordPress", "Nonces", "OOP"],
+    "keywords": ["WordPress", "Nonces", "OOP", "Github Actions"],
     "license": "MIT",
     "minimum-stability": "stable",
     "authors": [
